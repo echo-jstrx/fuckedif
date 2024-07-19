@@ -100,8 +100,8 @@
             color: #666;
         }
 
-        /* Circular Progress Bar Styles */
-        .circular-progress {
+        /* Doughnut Progress Bar Styles */
+        .doughnut-progress {
             position: relative;
             width: 80px;
             height: 80px;
@@ -110,7 +110,20 @@
             margin: 20px auto;
         }
 
-        .circular-progress::before {
+        .doughnut-progress::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 60%;
+            background-color: #fff;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .doughnut-progress::after {
             content: attr(data-progress) '%';
             position: absolute;
             top: 50%;
@@ -118,6 +131,7 @@
             transform: translate(-50%, -50%);
             font-size: 1.2em;
             color: #333;
+            z-index: 2;
         }
 
         /* Individual Review Styles */
@@ -229,11 +243,11 @@
             <!-- Additional Columns -->
             <div class="additional-column-1">
                 <h3>Column 1</h3>
-                <div class="circular-progress" data-progress="75"></div>
+                <div class="doughnut-progress" data-progress="75"></div>
             </div>
             <div class="additional-column-2">
                 <h3>Column 2</h3>
-                <div class="circular-progress" data-progress="50"></div>
+                <div class="doughnut-progress" data-progress="50"></div>
             </div>
         </div>
 
