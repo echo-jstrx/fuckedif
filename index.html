@@ -15,7 +15,7 @@
         }
 
         .review-section {
-/*             width: 80%; */
+            width: 80%;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
@@ -35,14 +35,18 @@
             margin-bottom: 30px;
         }
 
-        .review-summary, .rating-distribution, .additional-column-1, .additional-column-2 {
-            width: 23%;
+        .review-summary, .rating-distribution {
+            width: 48%; /* Adjust width to take more space */
             padding: 10px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             background-color: #f9f9f9;
             border-radius: 5px;
-            
-            align-content: center;
+            /* Ensure all boxes have the same height */
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .review-summary {
@@ -110,11 +114,10 @@
         /* Doughnut Progress Bar Styles */
         .doughnut-progress {
             position: relative;
-            width: 120px;
-            height: 120px;
+            width: 80px; /* Reduced size */
+            height: 80px; /* Reduced size */
             border-radius: 50%;
             background: conic-gradient(#f4b400 0% 75%, #ddd 75% 100%);
-            margin: 20px auto;
         }
 
         .doughnut-progress::before {
@@ -123,8 +126,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 80%;
-            height: 80%;
+            width: 70%;
+            height: 70%;
             background-color: #fff;
             border-radius: 50%;
             z-index: 1;
@@ -246,17 +249,7 @@
                     <span class="count">2</span>
                 </div>
             </div>
-
-            <!-- Additional Columns -->
-<!--             <div class="additional-column-1">
-                <h3>Column 1</h3>
-                <div class="doughnut-progress" data-progress="75"></div>
-            </div>
-            <div class="additional-column-2">
-                <h3>Column 2</h3>
-                <div class="doughnut-progress" data-progress="50"></div>
-            </div>
-        </div> -->
+        </div>
 
         <!-- Individual Reviews -->
         <div class="review-box">
