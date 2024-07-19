@@ -1,11 +1,5 @@
 <script>
     /* Review Section Styles */
-    body{
-        background-color: wheat;
-        width: 100%;
-        height: 100%;
-        padding: 0; margin: 0;
-    }
 .review-section {
     width: 80%;
     margin: 0 auto;
@@ -21,6 +15,71 @@
     margin-bottom: 20px;
 }
 
+/* Top Section Styles */
+.review-summary {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.average-rating {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.average-rating .rating-number {
+    font-weight: bold;
+    color: #333;
+}
+
+.average-rating .stars {
+    color: #f4b400;
+    margin-left: 5px;
+}
+
+.average-rating .total-reviews {
+    color: #666;
+    margin-left: 10px;
+}
+
+.rating-distribution {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating-bar span {
+    width: 50px;
+    text-align: right;
+    margin-right: 10px;
+    color: #666;
+}
+
+.rating-bar .bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.rating-bar .fill {
+    height: 100%;
+    background-color: #f4b400;
+}
+
+.rating-bar .count {
+    width: 30px;
+    text-align: left;
+    color: #666;
+}
+
+/* Individual Review Styles */
 .review-box {
     margin-bottom: 20px;
 }
@@ -74,11 +133,59 @@
 }
 
 </script>
-<body>
+
 <!-- Review Section -->
 <div class="review-section">
     <h2>Customer Reviews</h2>
+    
+    <!-- Top Section -->
+    <div class="review-summary">
+        <div class="average-rating">
+            <span class="rating-number">4.5</span>
+            <span class="stars">★★★★☆</span>
+            <span class="total-reviews">(100 reviews)</span>
+        </div>
+        
+        <div class="rating-distribution">
+            <div class="rating-bar">
+                <span>5 stars</span>
+                <div class="bar">
+                    <div class="fill" style="width: 60%;"></div>
+                </div>
+                <span class="count">60</span>
+            </div>
+            <div class="rating-bar">
+                <span>4 stars</span>
+                <div class="bar">
+                    <div class="fill" style="width: 25%;"></div>
+                </div>
+                <span class="count">25</span>
+            </div>
+            <div class="rating-bar">
+                <span>3 stars</span>
+                <div class="bar">
+                    <div class="fill" style="width: 10%;"></div>
+                </div>
+                <span class="count">10</span>
+            </div>
+            <div class="rating-bar">
+                <span>2 stars</span>
+                <div class="bar">
+                    <div class="fill" style="width: 3%;"></div>
+                </div>
+                <span class="count">3</span>
+            </div>
+            <div class="rating-bar">
+                <span>1 star</span>
+                <div class="bar">
+                    <div class="fill" style="width: 2%;"></div>
+                </div>
+                <span class="count">2</span>
+            </div>
+        </div>
+    </div>
 
+    <!-- Individual Reviews -->
     <div class="review-box">
         <div class="review">
             <div class="review-header">
@@ -108,7 +215,6 @@
                 <span>Rating: </span>
                 <span class="stars">★★★★★</span>
             </div>
-            </body>
         </div>
     </div>
     <!-- Add more review boxes as needed -->
