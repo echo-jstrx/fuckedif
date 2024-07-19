@@ -9,11 +9,14 @@
         /* Review Section Styles */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
         }
 
         .review-section {
             width: 80%;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
@@ -32,8 +35,8 @@
             margin-bottom: 30px;
         }
 
-        .review-summary, .additional-column-1, .additional-column-2 {
-            width: 30%;
+        .review-summary, .rating-distribution, .additional-column-1, .additional-column-2 {
+            width: 23%;
             padding: 10px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             background-color: #f9f9f9;
@@ -62,6 +65,10 @@
         .average-rating .total-reviews {
             color: #666;
             margin-left: 10px;
+        }
+
+        .rating-distribution {
+            width: 100%;
         }
 
         .rating-distribution .rating-bar {
@@ -163,43 +170,43 @@
                     <span class="stars">★★★★☆</span>
                     <span class="total-reviews">(100 reviews)</span>
                 </div>
-                
-                <div class="rating-distribution">
-                    <div class="rating-bar">
-                        <span>5 stars</span>
-                        <div class="bar">
-                            <div class="fill" style="width: 60%;"></div>
-                        </div>
-                        <span class="count">60</span>
+            </div>
+
+            <div class="rating-distribution">
+                <div class="rating-bar">
+                    <span>5 stars</span>
+                    <div class="bar">
+                        <div class="fill" style="width: 60%;"></div>
                     </div>
-                    <div class="rating-bar">
-                        <span>4 stars</span>
-                        <div class="bar">
-                            <div class="fill" style="width: 25%;"></div>
-                        </div>
-                        <span class="count">25</span>
+                    <span class="count">60</span>
+                </div>
+                <div class="rating-bar">
+                    <span>4 stars</span>
+                    <div class="bar">
+                        <div class="fill" style="width: 25%;"></div>
                     </div>
-                    <div class="rating-bar">
-                        <span>3 stars</span>
-                        <div class="bar">
-                            <div class="fill" style="width: 10%;"></div>
-                        </div>
-                        <span class="count">10</span>
+                    <span class="count">25</span>
+                </div>
+                <div class="rating-bar">
+                    <span>3 stars</span>
+                    <div class="bar">
+                        <div class="fill" style="width: 10%;"></div>
                     </div>
-                    <div class="rating-bar">
-                        <span>2 stars</span>
-                        <div class="bar">
-                            <div class="fill" style="width: 3%;"></div>
-                        </div>
-                        <span class="count">3</span>
+                    <span class="count">10</span>
+                </div>
+                <div class="rating-bar">
+                    <span>2 stars</span>
+                    <div class="bar">
+                        <div class="fill" style="width: 3%;"></div>
                     </div>
-                    <div class="rating-bar">
-                        <span>1 star</span>
-                        <div class="bar">
-                            <div class="fill" style="width: 2%;"></div>
-                        </div>
-                        <span class="count">2</span>
+                    <span class="count">3</span>
+                </div>
+                <div class="rating-bar">
+                    <span>1 star</span>
+                    <div class="bar">
+                        <div class="fill" style="width: 2%;"></div>
                     </div>
+                    <span class="count">2</span>
                 </div>
             </div>
 
