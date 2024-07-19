@@ -15,7 +15,7 @@
         }
 
         .review-section {
-/*             width: 80%; */
+            width: 80%;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
@@ -67,10 +67,6 @@
             margin-left: 10px;
         }
 
-/*         .rating-distribution {
-            width: 100%;
-        } */
-
         .rating-distribution .rating-bar {
             display: flex;
             align-items: center;
@@ -102,6 +98,26 @@
             width: 30px;
             text-align: left;
             color: #666;
+        }
+
+        /* Circular Progress Bar Styles */
+        .circular-progress {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: conic-gradient(#f4b400 0% 75%, #ddd 75% 100%);
+            margin: 20px auto;
+        }
+
+        .circular-progress::before {
+            content: attr(data-progress) '%';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2em;
+            color: #333;
         }
 
         /* Individual Review Styles */
@@ -213,11 +229,11 @@
             <!-- Additional Columns -->
             <div class="additional-column-1">
                 <h3>Column 1</h3>
-                <p>Additional content can go here.</p>
+                <div class="circular-progress" data-progress="75"></div>
             </div>
             <div class="additional-column-2">
                 <h3>Column 2</h3>
-                <p>Additional content can go here.</p>
+                <div class="circular-progress" data-progress="50"></div>
             </div>
         </div>
 
