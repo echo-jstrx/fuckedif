@@ -9,14 +9,11 @@
         /* Review Section Styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
         }
 
         .review-section {
             width: 80%;
-            margin: 20px auto;
+            margin: 0 auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
@@ -35,18 +32,12 @@
             margin-bottom: 30px;
         }
 
-        .review-summary, .rating-distribution {
-            width: 48%; /* Adjust width to take more space */
+        .review-summary, .additional-column-1, .additional-column-2 {
+            width: 30%;
             padding: 10px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             background-color: #f9f9f9;
             border-radius: 5px;
-            /* Ensure all boxes have the same height */
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
         }
 
         .review-summary {
@@ -56,26 +47,21 @@
         .average-rating {
             font-size: 1.5em;
             margin-bottom: 20px;
-            display: flex;
-            flex-wrap: wrap;
         }
 
         .average-rating .rating-number {
             font-weight: bold;
             color: #333;
-            width: 100%;
         }
 
         .average-rating .stars {
             color: #f4b400;
             margin-left: 5px;
-            width: 100%;
         }
 
         .average-rating .total-reviews {
             color: #666;
             margin-left: 10px;
-            width: 100%;
         }
 
         .rating-distribution .rating-bar {
@@ -109,39 +95,6 @@
             width: 30px;
             text-align: left;
             color: #666;
-        }
-
-        /* Doughnut Progress Bar Styles */
-        .doughnut-progress {
-            position: relative;
-            width: 80px; /* Reduced size */
-            height: 80px; /* Reduced size */
-            border-radius: 50%;
-            background: conic-gradient(#f4b400 0% 75%, #ddd 75% 100%);
-        }
-
-        .doughnut-progress::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 70%;
-            height: 70%;
-            background-color: #fff;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .doughnut-progress::after {
-            content: attr(data-progress) '%';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.2em;
-            color: #333;
-            z-index: 2;
         }
 
         /* Individual Review Styles */
@@ -210,44 +163,54 @@
                     <span class="stars">★★★★☆</span>
                     <span class="total-reviews">(100 reviews)</span>
                 </div>
+                
+                <div class="rating-distribution">
+                    <div class="rating-bar">
+                        <span>5 stars</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 60%;"></div>
+                        </div>
+                        <span class="count">60</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>4 stars</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 25%;"></div>
+                        </div>
+                        <span class="count">25</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>3 stars</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 10%;"></div>
+                        </div>
+                        <span class="count">10</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>2 stars</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 3%;"></div>
+                        </div>
+                        <span class="count">3</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>1 star</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 2%;"></div>
+                        </div>
+                        <span class="count">2</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="rating-distribution">
-                <div class="rating-bar">
-                    <span>5 stars</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 60%;"></div>
-                    </div>
-                    <span class="count">60</span>
-                </div>
-                <div class="rating-bar">
-                    <span>4 stars</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 25%;"></div>
-                    </div>
-                    <span class="count">25</span>
-                </div>
-                <div class="rating-bar">
-                    <span>3 stars</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 10%;"></div>
-                    </div>
-                    <span class="count">10</span>
-                </div>
-                <div class="rating-bar">
-                    <span>2 stars</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 3%;"></div>
-                    </div>
-                    <span class="count">3</span>
-                </div>
-                <div class="rating-bar">
-                    <span>1 star</span>
-                    <div class="bar">
-                        <div class="fill" style="width: 2%;"></div>
-                    </div>
-                    <span class="count">2</span>
-                </div>
+            <!-- Additional Columns -->
+            <div class="additional-column-1">
+                <h3>Column 1</h3>
+                <p>Additional content can go here.</p>
+            </div>
+            <div class="additional-column-2">
+                <h3>Column 2</h3>
+                <p>Additional content can go here.</p>
             </div>
         </div>
 
