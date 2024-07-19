@@ -1,221 +1,229 @@
-<script>
-    /* Review Section Styles */
-.review-section {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customer reviews section with average rating and rating distribution.">
+    <title>Customer Reviews</title>
+    <style>
+        /* Review Section Styles */
+        .review-section {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-.review-section h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
+        .review-section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-/* Top Section Styles */
-.review-summary {
-    margin-bottom: 30px;
-    text-align: center;
-}
+        /* Top Section Styles */
+        .review-summary {
+            margin-bottom: 30px;
+            text-align: center;
+        }
 
-.average-rating {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
+        .average-rating {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
 
-.average-rating .rating-number {
-    font-weight: bold;
-    color: #333;
-}
+        .average-rating .rating-number {
+            font-weight: bold;
+            color: #333;
+        }
 
-.average-rating .stars {
-    color: #f4b400;
-    margin-left: 5px;
-}
+        .average-rating .stars {
+            color: #f4b400;
+            margin-left: 5px;
+        }
 
-.average-rating .total-reviews {
-    color: #666;
-    margin-left: 10px;
-}
+        .average-rating .total-reviews {
+            color: #666;
+            margin-left: 10px;
+        }
 
-.rating-distribution {
-    width: 60%;
-    margin: 0 auto;
-}
+        .rating-distribution {
+            width: 60%;
+            margin: 0 auto;
+        }
 
-.rating-bar {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
 
-.rating-bar span {
-    width: 50px;
-    text-align: right;
-    margin-right: 10px;
-    color: #666;
-}
+        .rating-bar span {
+            width: 50px;
+            text-align: right;
+            margin-right: 10px;
+            color: #666;
+        }
 
-.rating-bar .bar {
-    flex-grow: 1;
-    height: 10px;
-    background-color: #ddd;
-    border-radius: 5px;
-    margin-right: 10px;
-    overflow: hidden;
-}
+        .rating-bar .bar {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+            overflow: hidden;
+        }
 
-.rating-bar .fill {
-    height: 100%;
-    background-color: #f4b400;
-}
+        .rating-bar .fill {
+            height: 100%;
+            background-color: #f4b400;
+        }
 
-.rating-bar .count {
-    width: 30px;
-    text-align: left;
-    color: #666;
-}
+        .rating-bar .count {
+            width: 30px;
+            text-align: left;
+            color: #666;
+        }
 
-/* Individual Review Styles */
-.review-box {
-    margin-bottom: 20px;
-}
+        /* Individual Review Styles */
+        .review-box {
+            margin-bottom: 20px;
+        }
 
-.review {
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
+        .review {
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
 
-.review-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
 
-.review-header h3 {
-    margin: 0;
-    color: #555;
-}
+        .review-header h3 {
+            margin: 0;
+            color: #555;
+        }
 
-.review-date {
-    font-size: 0.9em;
-    color: #999;
-}
+        .review-date {
+            font-size: 0.9em;
+            color: #999;
+        }
 
-.review-body {
-    margin-bottom: 10px;
-}
+        .review-body {
+            margin-bottom: 10px;
+        }
 
-.review-body p {
-    margin: 0;
-    color: #666;
-}
+        .review-body p {
+            margin: 0;
+            color: #666;
+        }
 
-.review-rating {
-    display: flex;
-    align-items: center;
-}
+        .review-rating {
+            display: flex;
+            align-items: center;
+        }
 
-.review-rating span {
-    color: #333;
-}
+        .review-rating span {
+            color: #333;
+        }
 
-.stars {
-    color: #f4b400;
-    margin-left: 5px;
-}
-
-</script>
-
-<!-- Review Section -->
-<div class="review-section">
-    <h2>Customer Reviews</h2>
-    
-    <!-- Top Section -->
-    <div class="review-summary">
-        <div class="average-rating">
-            <span class="rating-number">4.5</span>
-            <span class="stars">★★★★☆</span>
-            <span class="total-reviews">(100 reviews)</span>
-        </div>
+        .stars {
+            color: #f4b400;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="review-section">
+        <h2>Customer Reviews</h2>
         
-        <div class="rating-distribution">
-            <div class="rating-bar">
-                <span>5 stars</span>
-                <div class="bar">
-                    <div class="fill" style="width: 60%;"></div>
-                </div>
-                <span class="count">60</span>
-            </div>
-            <div class="rating-bar">
-                <span>4 stars</span>
-                <div class="bar">
-                    <div class="fill" style="width: 25%;"></div>
-                </div>
-                <span class="count">25</span>
-            </div>
-            <div class="rating-bar">
-                <span>3 stars</span>
-                <div class="bar">
-                    <div class="fill" style="width: 10%;"></div>
-                </div>
-                <span class="count">10</span>
-            </div>
-            <div class="rating-bar">
-                <span>2 stars</span>
-                <div class="bar">
-                    <div class="fill" style="width: 3%;"></div>
-                </div>
-                <span class="count">3</span>
-            </div>
-            <div class="rating-bar">
-                <span>1 star</span>
-                <div class="bar">
-                    <div class="fill" style="width: 2%;"></div>
-                </div>
-                <span class="count">2</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Individual Reviews -->
-    <div class="review-box">
-        <div class="review">
-            <div class="review-header">
-                <h3>John Doe</h3>
-                <span class="review-date">July 18, 2024</span>
-            </div>
-            <div class="review-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum egestas lorem, et feugiat erat pulvinar sit amet.</p>
-            </div>
-            <div class="review-rating">
-                <span>Rating: </span>
+        <!-- Top Section -->
+        <div class="review-summary">
+            <div class="average-rating">
+                <span class="rating-number">4.5</span>
                 <span class="stars">★★★★☆</span>
+                <span class="total-reviews">(100 reviews)</span>
+            </div>
+            
+            <div class="rating-distribution">
+                <div class="rating-bar">
+                    <span>5 stars</span>
+                    <div class="bar">
+                        <div class="fill" style="width: 60%;"></div>
+                    </div>
+                    <span class="count">60</span>
+                </div>
+                <div class="rating-bar">
+                    <span>4 stars</span>
+                    <div class="bar">
+                        <div class="fill" style="width: 25%;"></div>
+                    </div>
+                    <span class="count">25</span>
+                </div>
+                <div class="rating-bar">
+                    <span>3 stars</span>
+                    <div class="bar">
+                        <div class="fill" style="width: 10%;"></div>
+                    </div>
+                    <span class="count">10</span>
+                </div>
+                <div class="rating-bar">
+                    <span>2 stars</span>
+                    <div class="bar">
+                        <div class="fill" style="width: 3%;"></div>
+                    </div>
+                    <span class="count">3</span>
+                </div>
+                <div class="rating-bar">
+                    <span>1 star</span>
+                    <div class="bar">
+                        <div class="fill" style="width: 2%;"></div>
+                    </div>
+                    <span class="count">2</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="review-box">
-        <div class="review">
-            <div class="review-header">
-                <h3>Jane Smith</h3>
-                <span class="review-date">July 17, 2024</span>
-            </div>
-            <div class="review-body">
-                <p>Proin sit amet purus nec arcu scelerisque blandit. Quisque at justo vel nisl luctus ullamcorper.</p>
-            </div>
-            <div class="review-rating">
-                <span>Rating: </span>
-                <span class="stars">★★★★★</span>
+        <!-- Individual Reviews -->
+        <div class="review-box">
+            <div class="review">
+                <div class="review-header">
+                    <h3>John Doe</h3>
+                    <span class="review-date">July 18, 2024</span>
+                </div>
+                <div class="review-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum egestas lorem, et feugiat erat pulvinar sit amet.</p>
+                </div>
+                <div class="review-rating">
+                    <span>Rating: </span>
+                    <span class="stars">★★★★☆</span>
+                </div>
             </div>
         </div>
+
+        <div class="review-box">
+            <div class="review">
+                <div class="review-header">
+                    <h3>Jane Smith</h3>
+                    <span class="review-date">July 17, 2024</span>
+                </div>
+                <div class="review-body">
+                    <p>Proin sit amet purus nec arcu scelerisque blandit. Quisque at justo vel nisl luctus ullamcorper.</p>
+                </div>
+                <div class="review-rating">
+                    <span>Rating: </span>
+                    <span class="stars">★★★★★</span>
+                </div>
+            </div>
+        </div>
+        <!-- Add more review boxes as needed -->
     </div>
-    <!-- Add more review boxes as needed -->
-</div>
+</body>
+</html>
